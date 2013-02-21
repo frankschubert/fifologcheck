@@ -23,15 +23,22 @@ Usage Example
 =============
 
 rsyslog can easily be configured to send all messages into a file using the pipe symbol:
-    *.* |/var/tmp/logcheck.fifo
+```
+*.* |/var/tmp/logcheck.fifo
+```
 
 fifologcheck listens for messages on this named pipe and feeds them to a list of regexes, e.g.
-    smartd\[.+\]: Device: /dev/sd., Failed SMART usage Attribute: .+ Unknown_Attribute
+```
+smartd\[.+\]: Device: /dev/sd., Failed SMART usage Attribute: .+ Unknown_Attribute
+```
 
 A comprehensive list of unimportant messages can be complied from the logcheck database.
 
 fifologcheck itself is a simple perl while-loop reading from the named pipe and filtering everything unimportant out.
 I recommend running it using some kind of service supervision tool, e.g. runit.
-    ### /etc/service/fifologcheck/run
-    #!/bin/sh
-    exec /usr/local/sbin/fifologcheck.pl >/dev/null 2>&1
+
+```
+### /etc/service/fifologcheck/run
+#!/bin/sh
+exec /usr/local/sbin/fifologcheck.pl >/dev/null 2>&1
+```
