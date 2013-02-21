@@ -42,3 +42,9 @@ I recommend running it using some kind of service supervision tool, e.g. runit.
 #!/bin/sh
 exec /usr/local/sbin/fifologcheck.pl >/dev/null 2>&1
 ```
+
+TODO
+====
+
+[ ] find a more efficient way to handle regex files
+[ ] implement the regex part in C
