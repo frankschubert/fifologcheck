@@ -46,5 +46,5 @@ exec /usr/local/sbin/fifologcheck.pl >/dev/null 2>&1
 TODO
 ====
 
-- [ ] find a more efficient way to handle regex files
-- [ ] implement the regex part in C
+- find a more efficient way to handle regex files
+- implement the regex part in C
