@@ -2,7 +2,7 @@
 use POSIX qw/strftime/;
 
 my $fifo = "/opt/fifologcheck/fifo/logcheck.fifo";
-my $ignore = "/opt/fifologcheck/logcheck-espresto-default";
+my $ignore = "/opt/fifologcheck/regexes-for-unimportant-messages.txt";
 my $alertlog = "/opt/fifologcheck/logs/logcheck.alert";
 
 # hierein werden spaeter die ignores geladen
